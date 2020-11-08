@@ -7,44 +7,421 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  MaterialColor c1 = Colors.cyan; //Color.fromRGBO(54, 201, 201, 1.0);
+  MaterialColor c2 = Colors.lightBlue; //Color.fromRGBO(104, 182, 202, 1.0) ;
+  MaterialColor c3 = Colors.deepPurple; //Color.fromRGBO(100, 122, 166, 1.0) ;
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.yellow,
+      darkTheme: ThemeData(
+        primarySwatch: c3,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'LifeStyle ki baat hai', c1: c1, c2: c2, c3: c3),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key key, this.title, this.c1, this.c2, this.c3})
+      : super(key: key);
   final String title;
+  final MaterialColor c1, c2, c3;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      // appBar: AppBar(
+      //   title: Text(
+      //     widget.title,
+      //     style: TextStyle(color: Colors.white),
+      //   ),
+      //   backgroundColor: widget.c1,
+      // ),
+      body: ListView(
+        children: [
+          Container(
+            width: 200,
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              color: Colors.pink,
+              elevation: 10,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  const ListTile(
+                    leading: Icon(Icons.album, size: 70),
+                    title: Text('Heart Shaker',
+                        style: TextStyle(color: Colors.white)),
+                    subtitle:
+                        Text('TWICE', style: TextStyle(color: Colors.white)),
+                  ),
+                  ButtonTheme.bar(
+                    child: ButtonBar(
+                      children: <Widget>[
+                        FlatButton(
+                          child: const Text('Edit',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                        FlatButton(
+                          child: const Text('Delete',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            width: 200,
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              color: Colors.pink,
+              elevation: 10,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  const ListTile(
+                    leading: Icon(Icons.album, size: 70),
+                    title: Text('Heart Shaker',
+                        style: TextStyle(color: Colors.white)),
+                    subtitle:
+                        Text('TWICE', style: TextStyle(color: Colors.white)),
+                  ),
+                  ButtonTheme.bar(
+                    child: ButtonBar(
+                      children: <Widget>[
+                        FlatButton(
+                          child: const Text('Edit',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                        FlatButton(
+                          child: const Text('Delete',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            width: 200,
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              color: Colors.pink,
+              elevation: 10,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  const ListTile(
+                    leading: Icon(Icons.album, size: 70),
+                    title: Text('Heart Shaker',
+                        style: TextStyle(color: Colors.white)),
+                    subtitle:
+                        Text('TWICE', style: TextStyle(color: Colors.white)),
+                  ),
+                  ButtonTheme.bar(
+                    child: ButtonBar(
+                      children: <Widget>[
+                        FlatButton(
+                          child: const Text('Edit',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                        FlatButton(
+                          child: const Text('Delete',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            width: 200,
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              color: Colors.pink,
+              elevation: 10,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  const ListTile(
+                    leading: Icon(Icons.album, size: 70),
+                    title: Text('Heart Shaker',
+                        style: TextStyle(color: Colors.white)),
+                    subtitle:
+                        Text('TWICE', style: TextStyle(color: Colors.white)),
+                  ),
+                  ButtonTheme.bar(
+                    child: ButtonBar(
+                      children: <Widget>[
+                        FlatButton(
+                          child: const Text('Edit',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                        FlatButton(
+                          child: const Text('Delete',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            width: 200,
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              color: Colors.pink,
+              elevation: 10,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  const ListTile(
+                    leading: Icon(Icons.album, size: 70),
+                    title: Text('Heart Shaker',
+                        style: TextStyle(color: Colors.white)),
+                    subtitle:
+                        Text('TWICE', style: TextStyle(color: Colors.white)),
+                  ),
+                  ButtonTheme.bar(
+                    child: ButtonBar(
+                      children: <Widget>[
+                        FlatButton(
+                          child: const Text('Edit',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                        FlatButton(
+                          child: const Text('Delete',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            width: 200,
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              color: Colors.pink,
+              elevation: 10,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  const ListTile(
+                    leading: Icon(Icons.album, size: 70),
+                    title: Text('Heart Shaker',
+                        style: TextStyle(color: Colors.white)),
+                    subtitle:
+                        Text('TWICE', style: TextStyle(color: Colors.white)),
+                  ),
+                  ButtonTheme.bar(
+                    child: ButtonBar(
+                      children: <Widget>[
+                        FlatButton(
+                          child: const Text('Edit',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                        FlatButton(
+                          child: const Text('Delete',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            width: 200,
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              color: Colors.pink,
+              elevation: 10,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  const ListTile(
+                    leading: Icon(Icons.album, size: 70),
+                    title: Text('Heart Shaker',
+                        style: TextStyle(color: Colors.white)),
+                    subtitle:
+                        Text('TWICE', style: TextStyle(color: Colors.white)),
+                  ),
+                  ButtonTheme.bar(
+                    child: ButtonBar(
+                      children: <Widget>[
+                        FlatButton(
+                          child: const Text('Edit',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                        FlatButton(
+                          child: const Text('Delete',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            width: 200,
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              color: Colors.pink,
+              elevation: 10,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  const ListTile(
+                    leading: Icon(Icons.album, size: 70),
+                    title: Text('Heart Shaker',
+                        style: TextStyle(color: Colors.white)),
+                    subtitle:
+                        Text('TWICE', style: TextStyle(color: Colors.white)),
+                  ),
+                  ButtonTheme.bar(
+                    child: ButtonBar(
+                      children: <Widget>[
+                        FlatButton(
+                          child: const Text('Edit',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                        FlatButton(
+                          child: const Text('Delete',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            width: 200,
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              color: Colors.pink,
+              elevation: 10,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  const ListTile(
+                    leading: Icon(Icons.album, size: 70),
+                    title: Text('Heart Shaker',
+                        style: TextStyle(color: Colors.white)),
+                    subtitle:
+                        Text('TWICE', style: TextStyle(color: Colors.white)),
+                  ),
+                  ButtonTheme.bar(
+                    child: ButtonBar(
+                      children: <Widget>[
+                        FlatButton(
+                          child: const Text('Edit',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                        FlatButton(
+                          child: const Text('Delete',
+                              style: TextStyle(color: Colors.white)),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+        // children: [
+        //   Container(
+        //     height: 50,
+        //     color: widget.c1,
+        //     child: const Center(child: Text('Entry A')),
+        //   ),
+        //   Container(
+        //     height: 50,
+        //     color: widget.c2,
+        //     child: const Center(child: Text('Entry B')),
+        //   ),
+        //   Container(
+        //     height: 50,
+        //     color: widget.c3,
+        //     child: const Center(child: Text('Entry C')),
+        //   ),
+        // ],
+      ),
+    );
   }
+}
 
+class LineMultiColorGraph extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      backgroundColor: Colors.black54,
+      backgroundColor: widget.c1,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -108,7 +485,7 @@ class _MyHomePageState extends State<MyHomePage> {
     ];
     return <LineSeries<_ChartData, DateTime>>[
       LineSeries<_ChartData, DateTime>(
-          animationDuration: 2500,
+          animationDuration: 5000,
           dataSource: chartData,
           xValueMapper: (_ChartData sales, _) => sales.x,
           yValueMapper: (_ChartData sales, _) => sales.y,
